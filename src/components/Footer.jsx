@@ -25,10 +25,10 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           
           <ul className="flex flex-wrap justify-center gap-6 text-base">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/services" className="hover:underline">Services</a></li>
-            <li><a href="/projects" className="hover:underline">Projects</a></li>
-            <li><a href="/contact" className="hover:underline">Contact</a></li>
+            <li><a href="#home" className="hover:underline">Home</a></li>
+            <li><a href="#services" className="hover:underline">Services</a></li>
+            <li><a href="#projects" className="hover:underline">Projects</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
 
