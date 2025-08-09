@@ -12,11 +12,11 @@ const coreValues = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-white py-16 px-6 md:px-12">
+    <section id="about" className="bg-gray-100 py-16 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
 
         {/* Page Title */}
-        <h2 className="text-4xl font-bold text-gray-800 text-center mb-6">
+        <h2 className="text-3xl font-bold text-teal-800 mb-8 tracking-wide drop-shadow-sm text-center">
           Company Overview
         </h2>
 
@@ -37,14 +37,14 @@ const About = () => {
         {/* Vision & Mission Cards */}
         <div className="grid md:grid-cols-2 gap-3 w-full mb-6">
           <div className="bg-white border border-teal-200 rounded-xl shadow-md p-6 w-full hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold text-teal-800 mb-3 text-center">Our Vision</h3>
+            <h3 className="text-2xl font-semibold text-teal-700 mb-3 text-center">Our Vision</h3>
             <p className="text-gray-700 leading-relaxed text-base text-center">
               To be a leading provider of integrated construction and smart building solutions in East Africa.
             </p>
           </div>
 
           <div className="bg-white border border-teal-200 rounded-xl shadow-md p-6 w-full hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold text-teal-800 mb-3 text-center">Our Mission</h3>
+            <h3 className="text-2xl font-semibold text-teal-700 mb-3 text-center">Our Mission</h3>
             <p className="text-gray-700 leading-relaxed text-base text-center">
               To provide client-focused, efficient, and sustainable construction and MEP solutions through skilled workmanship, modern technology, and strict adherence to standards.
             </p>
@@ -53,7 +53,7 @@ const About = () => {
 
         {/* Core Values Card */}
         <div className="bg-gray-50 rounded-xl shadow-lg px-4 sm:px-6 py-6 w-full border border-teal-100">
-          <h3 className="text-2xl font-semibold text-teal-800 mb-4 sm:mb-6 text-center">
+          <h3 className="text-2xl font-semibold text-teal-700 mb-4 sm:mb-6 text-center">
             Our Core Values
           </h3>
 
@@ -65,8 +65,8 @@ const About = () => {
               >
                 <CheckCircle className="text-green-600 flex-shrink-0" size={24} />
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-1">{value.label}</h4>
-                  <p className="text-gray-600 text-sm leading-snug">{value.desc}</p>
+                  <h4 className="text-lg font-semibold text-teal-700 mb-1">{value.label}</h4>
+                  <p className="text-gray-700 text-sm leading-snug">{value.desc}</p>
                 </div>
               </div>
             ))}

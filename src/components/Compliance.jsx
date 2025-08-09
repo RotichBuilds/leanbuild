@@ -9,18 +9,18 @@ const Compliance = () => {
   ];
 
   return (
-    <section id="compliance" className="bg-gray-50 py-20 px-6 md:px-12">
+    <section id="compliance" className="bg-gray-100 py-20 px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
+        <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">
           Compliance & Registration
         </h2>
-        <ul className="text-lg text-gray-700 space-y-6">
+        <ul className="text-teal-700 space-y-6 max-w-3xl mx-auto text-lg">
           {items.map((item, index) => (
             <li
               key={index}
-              className="flex items-center justify-center gap-3 text-base md:text-lg"
+              className="flex items-center justify-center gap-4"
             >
-              <CheckCircle className="text-green-600" size={20} />
+              <CheckCircle className="text-green-700" size={20} />
               <span>{item}</span>
             </li>
           ))}

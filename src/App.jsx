@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout';
-import Hero from './components/Hero';
+import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Projects from './components/Projects';
@@ -16,7 +16,7 @@ import Contact from './components/Contact';
 // Combined homepage with sections
 const FullHomePage = () => (
   <>
-    <section id="home"><Hero /></section>
+    <section id="home"><Home /></section>
     <section id="about"><About /></section>
     <section id="services"><Services /></section>
     <section id="projects"><Projects /></section>

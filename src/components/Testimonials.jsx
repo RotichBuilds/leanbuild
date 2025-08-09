@@ -25,16 +25,17 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="bg-gray-100 py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
+        <h2 className="text-3xl font-bold text-center text-teal-900 mb-8 tracking-wide drop-shadow-sm">
+          What Our Clients Say
+        </h2>
         <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-200"
-            >
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
               <p className="text-gray-700 italic mb-4">“{testimonial.quote}”</p>
-              <h4 className="text-gray-900 font-semibold">{testimonial.name}</h4>
-              <p className="text-sm text-gray-600">{testimonial.role}</p>
+              <h4 className="text-lg font-semibold text-teal-700">{testimonial.name}</h4>
+              <p className="text-sm text-gray-700">{testimonial.role}</p>
             </div>
           ))}
         </div>

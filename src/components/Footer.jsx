@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-teal-900 text-white px-4 md:px-10 pt-2 pb-4 md:pt-4 md:pb-6">
+    <footer className=" bg-teal-800 text-white px-4 md:px-10 pt-2 pb-4 md:pt-4 md:pb-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         {/* Left: Logo + Description */}
         <div className="flex items-center space-x-4">
@@ -25,17 +25,17 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           
           <ul className="flex flex-wrap justify-center gap-6 text-base">
-            <li><a href="#home" className="hover:underline">Home</a></li>
-            <li><a href="#services" className="hover:underline">Services</a></li>
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><a href="/services" className="hover:underline">Services</a></li>
+            <li><a href="/projects" className="hover:underline">Projects</a></li>
+            <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
 
         {/* Right: Social Media Icons */}
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-center">
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
-          <div className="flex space-x-5 text-xl">
+          <div className="flex space-x-5 text-lg">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300"><FaFacebookF /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300"><FaTwitter /></a>
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300"><FaTiktok /></a>

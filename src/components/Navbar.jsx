@@ -85,11 +85,11 @@ const Navbar = () => {
           <img
             src="/images/logo.png"
             alt="Lean Build Logo"
-            className="h-8 w-auto" // You can increase h-8 to h-10 or more if needed
+            className="h-8 w-auto" // Change to h-10 if you want bigger
           />
           <span>Lean Build</span>
         </RouterLink>
-        
+
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
           {navItems.map((item) => (
