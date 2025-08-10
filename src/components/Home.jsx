@@ -34,7 +34,7 @@ const Home = () => {
             View Projects
           </Link>
           <Link
-            to="contact"
+            to="/contact"
             className="bg-white border border-gray-300 text-gray-800 px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-300"
           >
             Contact Us
