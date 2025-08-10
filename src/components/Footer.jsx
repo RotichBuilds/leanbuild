@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         {/* Left: Logo + Description */}
         <div className="flex items-center space-x-4">
-          <img src="/images/logo.png" alt="Lean Build Logo" className="h-16 w-auto object-contain"/>
+          <img src="/images/logo.png" alt="Lean Build Logo" className="h-14 w-auto object-contain"/>
           <p className="text-sm max-w-xs text-gray-200">
-            Lean Build Limited is committed to Excellence in Construction, Smart Systems, and Sustainable Building Solutions.
+            We are committed to Deliver Excellence in Construction, Smart Systems, and Sustainable Building Solutions.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           
           <ul className="flex flex-wrap justify-center gap-6 text-base">
-            <li><a href="#home" className="hover:underline">Home</a></li>
-            <li><a href="#services" className="hover:underline">Services</a></li>
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><a href="/services" className="hover:underline">Services</a></li>
+            <li><a href="/projects" className="hover:underline">Projects</a></li>
+            <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
 

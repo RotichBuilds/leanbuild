@@ -7,7 +7,7 @@ const coreValues = [
   { label: "Innovation", desc: "We apply modern technologies and solutions." },
   { label: "Safety", desc: "We prioritize health and safety in all operations." },
   { label: "Sustainability", desc: "We promote eco-friendly and efficient practices." },
-  { label: "Compliance", desc: "We are fully registered and licensed by NCA and comply with all statutory regulations" },
+  { label: "Compliance", desc: "We are fully registered and licensed by NCA and comply with all statutory regulations." },
 ];
 
 const About = () => {
@@ -25,7 +25,7 @@ const About = () => {
           <div className="max-w-5xl text-center">
             <p className="text-gray-700 text-lg leading-relaxed mb-5">
               <strong className="text-teal-700">Lean Build Limited</strong> is a registered and licensed construction company in Kenya, offering comprehensive solutions in general construction,
-              mechanical (plumbing) installations, and smart building systems integration.
+              mechanical and plumbing installations, and smart systems integration.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
               We are committed to delivering innovative, safe, and sustainable construction services tailored to the evolving needs of modern infrastructure in residential,

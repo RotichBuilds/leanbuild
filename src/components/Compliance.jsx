@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 
 const Compliance = () => {
   const items = [
-    'Registered under the Companies Act of Kenya',
+    'Registered under Companies Act of Kenya',
     'KRA Registered and Tax Compliant',
     'NCA Registered, Licensed and Compliant',
   ];

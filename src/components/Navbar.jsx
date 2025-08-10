@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -7,9 +7,29 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
+  const menuRef = useRef(null);
 
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  // Close on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setNavOpen(false);
+      }
+    };
+
+    if (navOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navOpen]);
 
   useEffect(() => {
     if (!isHome) return; // Only run scroll logic on homepage
@@ -79,13 +99,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
         <RouterLink
           to="/"
-          className="flex items-center space-x-2 text-2xl font-bold text-tealbrand"
+          className="flex items-baseline space-x-2 text-2xl font-bold text-tealbrand"
           onClick={() => setNavOpen(false)}
         >
           <img
             src="/images/logo.png"
             alt="Lean Build Logo"
-            className="h-8 w-auto" // Change to h-10 if you want bigger
+            className="h-6 w-auto"
           />
           <span>Lean Build</span>
         </RouterLink>
@@ -107,7 +127,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {navOpen && (
-        <ul className="md:hidden flex flex-col items-center bg-white shadow-md py-4 space-y-4 transition-all duration-300">
+        <ul
+          ref={menuRef}
+          className="md:hidden flex flex-col items-center bg-white shadow-md py-4 space-y-4 transition-all duration-300"
+        >
           {navItems.map((item) => (
             <li key={item.id}>{renderNavItem(item)}</li>
           ))}

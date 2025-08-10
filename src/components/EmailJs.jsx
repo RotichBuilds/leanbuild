@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 const EmailJs = ({ onClose }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
@@ -10,6 +12,14 @@ const EmailJs = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!name.trim()) {
+      alert("Please enter your name.");
+      return;
+    }
+    if (!email.trim()) {
+      alert("Please enter your email address.");
+      return;
+    }
     if (!phone.trim()) {
       alert("Please enter your phone number.");
       return;
@@ -25,25 +35,34 @@ const EmailJs = ({ onClose }) => {
 
     setSending(true);
 
-    const templateParams = { subject, message, phone };
+    const templateParams = {
+      from_name: name,
+      reply_to: email,
+      subject,
+      message,
+      phone,
+    };
 
     emailjs
       .send(
-        Lean563,  // Replace with your EmailJS service ID
-        template_w58fp4s, // Replace with your EmailJS template ID
+        "Lean563",            // Your EmailJS service ID
+        "template_w58fp4s",   // Your EmailJS template ID
         templateParams,
-        K-z2qLFvWtT-oSEKv      // Replace with your EmailJS user ID (public key)
+        "K-z2qLFvWtT-oSEKv"   // Your EmailJS public key
       )
       .then(
         () => {
           alert("Message sent successfully!");
+          setName("");
+          setEmail("");
           setSubject("");
           setMessage("");
           setPhone("");
           setSending(false);
           onClose();
         },
-        () => {
+        (error) => {
+          console.error("EmailJS error:", error);
           alert("Failed to send message. Please try again later.");
           setSending(false);
         }
@@ -62,7 +81,35 @@ const EmailJs = ({ onClose }) => {
         onClick={stopPropagation}
         className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full"
       >
-        <h2 className="text-2xl font-semibold mb-4 text-center">Submit Your Query</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Submit Your Query
+        </h2>
+
+        <label htmlFor="name" className="block font-medium mb-1">
+          Name (required)
+        </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Your full name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-teal-400"
+        />
+
+        <label htmlFor="email" className="block font-medium mb-1">
+          Email (required)
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="you@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-teal-400"
+        />
 
         <label htmlFor="phone" className="block font-medium mb-1">
           Phone Number (required)
@@ -121,7 +168,9 @@ const EmailJs = ({ onClose }) => {
             type="submit"
             disabled={sending}
             className={`font-semibold py-2 px-4 rounded text-white ${
-              sending ? "bg-teal-400 cursor-not-allowed" : "bg-teal-600 hover:bg-teal-700"
+              sending
+                ? "bg-teal-400 cursor-not-allowed"
+                : "bg-teal-600 hover:bg-teal-700"
             }`}
           >
             {sending ? "Sending..." : "Submit"}

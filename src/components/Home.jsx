@@ -10,7 +10,7 @@ const Home = () => {
       <div className="max-w-full sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-0">
 
         {/* Highlighted Slogan */}
-        <p className="text-lg sm:text-xl md:text-2xl font-semibold text-tealbrand uppercase tracking-widest mb-4 animate-pulse">
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold text-tealbrand /*uppercase*/ tracking-widest mb-4 animate-pulse">
           We Build. We Connect. We Automate.
         </p>
 
@@ -34,7 +34,7 @@ const Home = () => {
             View Projects
           </Link>
           <Link
-            to="/contact"
+            to="contact"
             className="bg-white border border-gray-300 text-gray-800 px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-300"
           >
             Contact Us

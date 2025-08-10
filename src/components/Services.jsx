@@ -13,7 +13,7 @@ const Services = () => {
       ],
     },
     {
-      category: 'Mechanical / Plumbing Works',
+      category: 'Mechanical and Plumbing Works',
       items: [
         'Water Supply and Drainage',
         'Sanitary Installations',
@@ -21,7 +21,7 @@ const Services = () => {
       ],
     },
     {
-      category: 'Smart Building Systems',
+      category: 'Smart Systems Integration',
       items: [
         'Smart Water Reticulation',
         'Lighting Automation',

@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
           Why Choose Us
         </h2>
         <p className="text-lg text-teal-700 mb-10 max-w-2xl mx-auto">
-          At Lean Build Limited, we offer more than just Construction — we deliver Trust, Innovation, and Excellence in every Project.
+          At Lean Build, we offer more than just Construction — we deliver Trust, Innovation, and Excellence in every Project.
         </p>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 items-start text-left max-w-4xl mx-auto">
