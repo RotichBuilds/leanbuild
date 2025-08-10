@@ -20,7 +20,7 @@ const Compliance = () => {
               key={index}
               className="flex items-center justify-center gap-4"
             >
-              <CheckCircle className="text-green-700" size={20} />
+              <CheckCircle className="text-green-600" size={20} />
               <span>{item}</span>
             </li>
           ))}

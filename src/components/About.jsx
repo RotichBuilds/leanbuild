@@ -63,9 +63,9 @@ const About = () => {
                 key={idx}
                 className="bg-white rounded-lg shadow-sm p-4 flex items-start gap-3 hover:shadow-md transition w-full border border-gray-100"
               >
-                <CheckCircle className="text-green-600 flex-shrink-0" size={24} />
+                <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
                 <div>
-                  <h4 className="text-lg font-semibold text-teal-700 mb-1">{value.label}</h4>
+                  <h4 className="text-lg font-semibold text-teal-700">{value.label}</h4>
                   <p className="text-gray-700 text-sm leading-snug">{value.desc}</p>
                 </div>
               </div>
