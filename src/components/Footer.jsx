@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -19,8 +21,9 @@ const Footer = () => {
             We are committed to Deliver Excellence in Construction, Smart Systems, and Sustainable Building Solutions.
           </p>
         </div>
-
+        
         {/* Center: Horizontal Quick Links */}
+        {/*
         <div className="flex flex-col items-center">
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           
@@ -31,7 +34,34 @@ const Footer = () => {
             <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
+        */}
+        {/* Center: Horizontal Quick Links */}
+        <div className="flex flex-col items-center">
+          <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
 
+          <ul className="flex flex-wrap justify-center gap-6 text-base">
+            <li>
+              <Link to="/" className="hover:underline">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:underline">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/projects" className="hover:underline">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
         {/* Right: Social Media Icons */}
         <div className="flex flex-col items-center">
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
