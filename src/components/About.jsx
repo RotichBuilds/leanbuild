@@ -7,7 +7,7 @@ const coreValues = [
   { label: "Innovation", desc: "We apply modern technologies and solutions." },
   { label: "Safety", desc: "We prioritize health and safety in all operations." },
   { label: "Sustainability", desc: "We promote eco-friendly and efficient practices." },
-  { label: "Compliance", desc: "We are fully registered and licensed by NCA and comply with all statutory regulations." },
+  { label: "Compliance", desc: "We are fully registered, licensed by NCA and comply with all statutory regulations." },
 ];
 
 const About = () => {
@@ -38,14 +38,14 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-3 w-full mb-6">
           <div className="bg-white border border-teal-200 rounded-xl shadow-md p-6 w-full hover:shadow-lg transition">
             <h3 className="text-2xl font-semibold text-teal-700 mb-3 text-center">Our Vision</h3>
-            <p className="text-gray-700 leading-relaxed text-base text-center">
+            <p className="text-gray-700 leading-relaxed text-center text-lg">
               To be a leading provider of integrated construction and smart building solutions in East Africa.
             </p>
           </div>
 
           <div className="bg-white border border-teal-200 rounded-xl shadow-md p-6 w-full hover:shadow-lg transition">
             <h3 className="text-2xl font-semibold text-teal-700 mb-3 text-center">Our Mission</h3>
-            <p className="text-gray-700 leading-relaxed text-base text-center">
+            <p className="text-gray-700 leading-relaxed text-center text-lg">
               To provide client-focused, efficient, and sustainable construction and MEP solutions through skilled workmanship, modern technology, and strict adherence to standards.
             </p>
           </div>
@@ -66,7 +66,7 @@ const About = () => {
                 <CheckCircle className="text-green-600 flex-shrink-0" size={20} />
                 <div>
                   <h4 className="text-lg font-semibold text-teal-700">{value.label}</h4>
-                  <p className="text-gray-700 text-sm leading-snug">{value.desc}</p>
+                  <p className="text-gray-700 text-base leading-snug">{value.desc}</p>
                 </div>
               </div>
             ))}
