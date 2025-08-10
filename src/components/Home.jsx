@@ -28,13 +28,13 @@ const Home = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 px-2 sm:px-0">
           <Link
-            to="/projects"
+            to="#projects"
             className="bg-tealbrand text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-semibold shadow-md hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tealbrand transition duration-300"
           >
             View Projects
           </Link>
           <Link
-            to="/contact"
+            to="#contact"
             className="bg-white border border-gray-300 text-gray-800 px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-300"
           >
             Contact Us
