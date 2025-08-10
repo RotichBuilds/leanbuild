@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">
           Why Choose Us
         </h2>
-        <p className="text-lg text-teal-700 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg text-teal-700 mb-10 max-w-3xl mx-auto ">
           At Lean Build, we offer more than just Construction — we deliver Trust, Innovation, and Excellence in every Project.
         </p>
 

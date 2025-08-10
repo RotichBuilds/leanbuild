@@ -7,7 +7,7 @@ const OurTeam = () => {
         <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">
           Our Team
         </h2>
-        <p className="text-teal-700 text-lg leading-relaxed mb-6 max-w-3xl mx-auto">
+        <p className="text-teal-700 text-lg leading-relaxed max-w-3xl mx-auto">
           <strong className="text-teal-650">Lean Build</strong> is powered by a Multidisciplinary Team of Seasoned Professionals dedicated to Excellence in Construction and Project Delivery.
         </p>
         <p className="text-teal-700 text-lg leading-relaxed max-w-3xl mx-auto">

@@ -41,7 +41,7 @@ const Services = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow border border-teal-100"
             >
-              <h3 className="text-xl font-semibold text-teal-700 mb-4">{service.category}</h3>
+              <h3 className="text-xl font-semibold text-teal-700 max-w-3xl mb-4">{service.category}</h3>
               <ul className="space-y-2 text-gray-700">
                 {service.items.map((item, i) => (
                   <li
