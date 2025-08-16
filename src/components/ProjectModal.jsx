@@ -17,7 +17,6 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
   if (!isOpen || !project) return null;
 
-  // Handle click outside the modal content to close
   const handleClickOutside = (e) => {
     if (e.target.id === 'modal-overlay') {
       onClose();
@@ -32,7 +31,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
     >
       <div
         className="relative bg-white rounded-lg max-w-3xl w-full p-4"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
@@ -64,7 +63,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
           ))}
         </Swiper>
 
-        {/* Optional description */}
+        {/* Updated descriptions */}
         {project.description && (
           <p className="mt-4 text-gray-600 text-center">{project.description}</p>
         )}

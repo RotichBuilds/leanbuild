@@ -1,74 +1,50 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const mockProjectData = [
-  {
-    id: 'project-1',
-    title: 'Elegant Staircase Railing',
-    description: 'Custom stainless steel and glass railing for a modern home.',
-    images: [
-      '/images/project1-1.jpg',
-      '/images/project1-2.jpg',
-      '/images/project1-3.jpg',
-    ],
-  },
-  {
-    id: 'project-2',
-    title: 'Luxury Balcony Fence',
-    description: 'Powder-coated aluminum railings with wood-textured finish.',
-    images: [
-      '/images/project2-1.jpg',
-      '/images/project2-2.jpg',
-    ],
-  },
-  // Add more as needed
-];
-
-const ProjectDetails = () => {
-  const { projectId } = useParams();
+// Pass the project array as a prop from a parent component
+const ProjectDetails = ({ projects }) => {
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const project = mockProjectData.find((p) => p.id === projectId);
-
-  if (!project) {
-    return (
-      <div className="p-6 text-center text-red-600">
-        <h2 className="text-2xl font-bold mb-4">Project Not Found</h2>
-        <button
-          onClick={() => navigate(-1)}
-          className="mt-4 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700"
-        >
-          Go Back
-        </button>
-      </div>
-    );
-  }
+  const project = projects.find((p) => p.id === id);
+  if (!project)
+    return <p className="text-center text-red-600 mt-10">Project not found!</p>;
 
   return (
-    <div className="min-h-screen p-6 bg-gray-50">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    <div className="max-w-4xl mx-auto py-10 px-6">
+      <h2 className="text-3xl font-bold text-teal-900 mb-4">{project.title}</h2>
+      <p className="text-teal-700 mb-6">{project.details}</p>
+
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={10}
+        slidesPerView={1}
+      >
+        {project.images.map((img, idx) => (
+          <SwiperSlide key={idx}>
+            <img
+              src={img}
+              alt={`${project.title}-${idx}`}
+              className="w-full h-96 object-cover rounded"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="mt-6">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center text-teal-600 hover:text-teal-800 mb-4"
+          className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700"
         >
-          <FiArrowLeft className="mr-2" />
-          Back to Projects
+          Back
         </button>
-
-        <h1 className="text-3xl font-bold mb-2 text-teal-700">{project.title}</h1>
-        <p className="text-gray-700 mb-6">{project.description}</p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {project.images.map((imgUrl, idx) => (
-            <img
-              key={idx}
-              src={imgUrl}
-              alt={`${project.title} - ${idx + 1}`}
-              className="w-full h-64 object-cover rounded-lg border border-teal-200"
-            />
-          ))}
-        </div>
       </div>
     </div>
   );

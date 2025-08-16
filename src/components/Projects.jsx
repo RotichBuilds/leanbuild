@@ -7,35 +7,38 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Import local images
+import modernised_rural_elev1 from '../assets/raw/modernised_rural/modernised_rural_elev1.jpg';
+import modernised_rural_elev2 from '../assets/raw/modernised_rural/modernised_rural_elev2.jpg';
+import modernised_rural_elev3 from '../assets/raw/modernised_rural/modernised_rural_elev3.jpg';
+import modernised_rural_elev4 from '../assets/raw/modernised_rural/modernised_rural_elev4.jpg';
+import modernised_rural_elev5 from '../assets/raw/modernised_rural/modernised_rural_elev5.jpg';
+
+import minimalistic_interior1 from '../assets/raw/minimalistic_interior/minimalistic_interior1.jpg';
+import minimalistic_interior2 from '../assets/raw/minimalistic_interior/minimalistic_interior2.jpg';
+import minimalistic_interior3 from '../assets/raw/minimalistic_interior/minimalistic_interior3.jpg';
+import minimalistic_interior4 from '../assets/raw/minimalistic_interior/minimalistic_interior4.jpg';
+import minimalistic_interior5 from '../assets/raw/minimalistic_interior/minimalistic_interior5.jpg';
+
+
 const projects = [
   {
-    id: 'smart-home-wiring',
-    title: 'Smart Home Wiring',
-    description: 'Automated lighting and security systems integrated into modern homes.',
-    images: ['/images/project1.jpg', '/images/project1-2.jpg'],
-    details: 'This project involved complete smart automation for a 5-bedroom villa, including Alexa integration and mobile app control.'
+    id: 'modernised_rural_concepts',
+    title: 'Modernised Rural Concepts',
+    description: 'Compact, elegant modern home designed for comfort, aesthetics, and functionality.',
+    images: [modernised_rural_elev1, modernised_rural_elev2, modernised_rural_elev3, modernised_rural_elev4, modernised_rural_elev5],
+    details:
+      'Its use of natural materials, clean lines, and integration with landscaped outdoor spaces gives it a luxurious yet approachable feel, ideal for a suburban or semi-rural setting.'
   },
   {
-    id: 'office-fit-out',
-    title: 'Office Fit-Out',
-    description: 'Custom partitioning, smart access, and ELV integration for a corporate office.',
-    images: ['/images/project2.jpg', '/images/project2-2.jpg'],
-    details: 'A 10,000 sq. ft. office designed with high-efficiency networking, biometric access, and custom lighting systems.'
+    id: 'interior_concepts',
+    title: 'Minimalistic Interior Concepts',
+    description: '',
+    images: [minimalistic_interior1, minimalistic_interior2, minimalistic_interior3, minimalistic_interior4,minimalistic_interior5],
+    details:
+      ''
   },
-  {
-    id: 'data-center-cabling',
-    title: 'Data Center Cabling',
-    description: 'Structured cabling and power solutions for high-performance data centers.',
-    images: ['/images/project3.jpg', '/images/project3-2.jpg'],
-    details: 'We implemented redundant structured cabling, rack systems, and UPS backup for 99.9% uptime assurance.'
-  },
-  {
-    id: 'apartment-renovation',
-    title: 'Apartment Renovation',
-    description: 'Modern interior and electrical upgrades for multi-unit residential buildings.',
-    images: ['/images/project4.jpg', '/images/project4-2.jpg'],
-    details: 'The project included energy-efficient lighting, smart meters, and modern design finishes in 24 units.'
-  },
+ 
 ];
 
 const Projects = () => {
@@ -57,7 +60,9 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-gray-100 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">Our Projects</h2>
+        <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">
+          Our Projects
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
@@ -73,15 +78,6 @@ const Projects = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-teal-800 mb-2">{project.title}</h3>
                 <p className="text-teal-700 text-sm">{project.description}</p>
-                {/*<button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleRouteToProject(project.id);
-                  }}
-                  className="mt-4 inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700"
-                >
-                  View Project
-                </button>*/}
               </div>
             </div>
           ))}

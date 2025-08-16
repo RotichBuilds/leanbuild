@@ -10,7 +10,7 @@ import ProjectDetails from './components/ProjectDetails';
 import WhyChooseUs from './components/WhyChooseUs';
 import Compliance from './components/Compliance';
 import OurTeam from './components/OurTeam';
-import Testimonials from './components/Testimonials';
+//import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 
 // Combined homepage with sections
@@ -23,7 +23,7 @@ const FullHomePage = () => (
     <section id="why-choose-us"><WhyChooseUs /></section>
     <section id="compliance"><Compliance /></section>
     <section id="our-team"><OurTeam /></section>
-    <section id="testimonials"><Testimonials /></section>
+    {/*<section id="testimonials"><Testimonials /></section>*/}
     <section id="contact"><Contact /></section>
   </>
 );
@@ -41,7 +41,7 @@ const App = () => {
           <Route path="why-choose-us" element={<WhyChooseUs />} />
           <Route path="compliance" element={<Compliance />} />
           <Route path="our-team" element={<OurTeam />} />
-          <Route path="testimonials" element={<Testimonials />} />
+          {/*<Route path="testimonials" element={<Testimonials />} />*/}
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
