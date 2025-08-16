@@ -10,7 +10,8 @@ const Contact = () => {
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-teal-900 mb-8 tracking-wide drop-shadow-sm">Contact Us</h2>
         <p className="text-gray-700 text-lg mb-4">
-          Have a project in mind? We'd love to hear from{" "}
+        Have a project in mind? We'd love to hear from you. </p>
+        {/*{" "}
           <button
             onClick={() => setShowForm(true)}
             className={`relative inline font-semibold px-2 py-1 rounded underline decoration-teal-300 cursor-pointer transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
@@ -25,11 +26,11 @@ const Contact = () => {
             you
 
             {/* Tooltip */}
-            <span className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-teal-800 text-white text-xs rounded px-2 py-1 opacity-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100">
+            {/*<span className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-teal-800 text-white text-xs rounded px-2 py-1 opacity-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100">
               🏗️ Let’s build something great together — contact us!
             </span>
           </button>
-        </p>
+        </p> */}
 
         {/* Your existing contact info */}
         <div className="text-gray-800 text-base space-y-2 leading-relaxed">
