@@ -43,7 +43,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         </button>
 
         {/* Modal Title */}
-        <h2 className="text-2xl font-semibold mb-4 text-center">{project.title}</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-center">{project.title}</h2>
 
         {/* Swiper with images */}
         <Swiper
@@ -57,7 +57,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               <img
                 src={imgUrl}
                 alt={`Project ${project.title} - Slide ${index + 1}`}
-                className="w-full h-80 object-cover rounded-md"
+                className="w-full h-50 sm:h-80 md:h-96 lg:h-[28rem] object-cover rounded-md"
               />
             </SwiperSlide>
           ))}
@@ -65,7 +65,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
         {/* Updated descriptions */}
         {project.description && (
-          <p className="mt-4 text-gray-600 text-center">{project.description}</p>
+          <p className="mt-4 text-gray-600 text-sm sm:text-base text-center">{project.description}</p>
         )}
       </div>
     </div>

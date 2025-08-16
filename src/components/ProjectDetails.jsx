@@ -17,8 +17,8 @@ const ProjectDetails = ({ projects }) => {
 
   return (
     <div className="max-w-4xl mx-auto py-10 px-6">
-      <h2 className="text-3xl font-bold text-teal-900 mb-4">{project.title}</h2>
-      <p className="text-teal-700 mb-6">{project.details}</p>
+      <h2 className="text-2xl sm:text-3xl font-bold text-teal-900 mb-4">{project.title}</h2>
+      <p className="text-sm sm:text-base text-teal-700 mb-6">{project.details}</p>
 
       <Swiper
         modules={[Navigation, Pagination]}
@@ -32,7 +32,7 @@ const ProjectDetails = ({ projects }) => {
             <img
               src={img}
               alt={`${project.title}-${idx}`}
-              className="w-full h-96 object-cover rounded"
+              className="w-full h-50 sm:h-80 md:h-96 lg:h-[28rem] object-cover rounded"
             />
           </SwiperSlide>
         ))}

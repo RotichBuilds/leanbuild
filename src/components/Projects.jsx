@@ -20,6 +20,18 @@ import minimalistic_interior3 from '../assets/raw/minimalistic_interior/minimali
 import minimalistic_interior4 from '../assets/raw/minimalistic_interior/minimalistic_interior4.jpg';
 import minimalistic_interior5 from '../assets/raw/minimalistic_interior/minimalistic_interior5.jpg';
 
+import suburb_concept1 from '../assets/raw/suburbs/suburb_concept1.jpg';
+import suburb_concept2 from '../assets/raw/suburbs/suburb_concept2.jpg';
+
+import modernised_kitchen1 from '../assets/raw/modern_kitchen/modernised_kitchen1.jpg';
+import modernised_kitchen2 from '../assets/raw/modern_kitchen/modernised_kitchen2.jpg';
+import modernised_kitchen3 from '../assets/raw/modern_kitchen/modernised_kitchen3.jpg';
+import modernised_kitchen4 from '../assets/raw/modern_kitchen/modernised_kitchen4.jpg';
+import modernised_kitchen5 from '../assets/raw/modern_kitchen/modernised_kitchen5.jpg';
+import modernised_kitchen6 from '../assets/raw/modern_kitchen/modernised_kitchen6.jpg';
+import modernised_kitchen7 from '../assets/raw/modern_kitchen/modernised_kitchen7.jpg';
+
+
 
 const projects = [
   {
@@ -30,11 +42,28 @@ const projects = [
     details:
       'Its use of natural materials, clean lines, and integration with landscaped outdoor spaces gives it a luxurious yet approachable feel, ideal for a suburban or semi-rural setting.'
   },
+
   {
     id: 'interior_concepts',
     title: 'Minimalistic Interior Concepts',
     description: '',
     images: [minimalistic_interior1, minimalistic_interior2, minimalistic_interior3, minimalistic_interior4,minimalistic_interior5],
+    details:
+      ''
+  },
+    {
+    id: 'suburb_concepts',
+    title: 'Suburb Concepts',
+    description: '',
+    images: [suburb_concept1, suburb_concept2],
+    details:
+      ''
+  },
+  {
+    id: 'kitchen_concepts',
+    title: 'Kitchen Concepts',
+    description: '',
+    images: [modernised_kitchen1, modernised_kitchen2, modernised_kitchen3, modernised_kitchen4, modernised_kitchen5, modernised_kitchen6, modernised_kitchen7],
     details:
       ''
   },
@@ -73,11 +102,11 @@ const Projects = () => {
               <img
                 src={project.images[0]}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 sm:h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-teal-800 mb-2">{project.title}</h3>
-                <p className="text-teal-700 text-sm">{project.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-teal-800 mb-2">{project.title}</h3>
+                <p className="text-xs sm:text-sm text-teal-700">{project.description}</p>
               </div>
             </div>
           ))}

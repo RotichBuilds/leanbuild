@@ -48,8 +48,8 @@ const Contact = () => {
           </p>
           <p>
             Email:&nbsp;
-            <a href="mailto:info@leanbuild.co.ke" className="text-teal-700 hover:underline">
-              info@leanbuild.co.ke
+            <a href="mailto:info.leanbuild@gmail.com" className="text-teal-700 hover:underline">
+              info.leanbuild@gmail.com
             </a>
           </p>
           <p>Location: Greyville Hub, Nairobi, Kenya. </p>
